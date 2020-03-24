@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="./js/leaflet-providers.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+    <link rel='stylesheet' type='text/css' href="./Sanstitre-1.css" />
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <title>Le Projet</title>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="##" class="nav-link" id="boutonGares">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M18.125,15.804l-4.038-4.037c0.675-1.079,1.012-2.308,1.01-3.534C15.089,4.62,12.199,1.75,8.584,1.75C4.815,1.75,1.982,4.726,2,8.286c0.021,3.577,2.908,6.549,6.578,6.549c1.241,0,2.417-0.347,3.44-0.985l4.032,4.026c0.167,0.166,0.43,0.166,0.596,0l1.479-1.478C18.292,16.234,18.292,15.968,18.125,15.804 M8.578,13.99c-3.198,0-5.716-2.593-5.733-5.71c-0.017-3.084,2.438-5.686,5.74-5.686c3.197,0,5.625,2.493,5.64,5.624C14.242,11.548,11.621,13.99,8.578,13.99 M16.349,16.981l-3.637-3.635c0.131-0.11,0.721-0.695,0.876-0.884l3.642,3.639L16.349,16.981z"></path>
+						</svg>
+                    <span class="link-text">Afficher / Retirer les gares</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="##" class="nav-link" id='localisation'>
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+						</svg>
+                    <span class="link-text">Se géolocaliser</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="##" class="nav-link" id="boutonVoies">
+                    <svg class="svg-icon" viewBox="0 0 503.676 503.676"><path d="m492.776 353.944c-48.422-59.859-122.249-96.391-201.958-96.391h-271.287c-8.151 0-15 6.128-15.902 14.23-5.11 45.929-5.017 99.199 1.519 147.449 1.075 7.934 7.849 13.853 15.855 13.853h434.001c40.862 0 63.462-47.384 37.772-79.141zm-58.093-13.131c-35.184 0-67.447 2.691-108.413-20.265-14.647-8.208-27.889-18.704-39.21-30.995 57.084.001 106.548 17.794 147.623 51.26zm20.321 60.272h-419.823c-3.876-36.203-4.152-75.673-1.137-111.532h212.27c35.562 52.075 94.466 83.259 157.577 83.259h62.959c.346.421.704.833 1.047 1.257 8.789 10.865 1.096 27.016-12.893 27.016z"/><path d="m180.006 308.936h-102.22c-8.837 0-16 7.164-16 16s7.163 16 16 16h102.22c8.837 0 16-7.164 16-16s-7.163-16-16-16z"/><path d="m291.984 163.508c6.248-6.249 6.249-16.379 0-22.627-22.193-22.195-58.119-22.197-80.314 0-6.249 6.249-6.248 16.379 0 22.627s16.379 6.249 22.627 0c9.69-9.689 25.371-9.689 35.061 0 6.247 6.248 16.377 6.248 22.626 0z"/><path d="m212.097 119.067c21.908-21.907 57.551-21.907 79.459 0 3.124 3.124 7.219 4.686 11.313 4.686 14.127 0 21.422-17.206 11.313-27.313-34.464-34.464-90.245-34.468-124.713 0-6.249 6.248-6.249 16.379 0 22.627 6.25 6.248 16.38 6.248 22.628 0z"/><circle cx="251.827" cy="196.753" r="19.041"/></svg>
+                    <span class="link-text">Afficher / Retirer les voies</span>
+                </a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+
+    <div id="main-div">
+
+        <div id="mapid">
+
+        </div>
+
+        <div id="objets" class="ui-widget-content">
+            <p> </p>
+        </div>
+    </div>
+</body>
+
+</html>
